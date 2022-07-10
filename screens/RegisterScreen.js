@@ -22,7 +22,7 @@ const RegisterScreen = ({ navigation }) => {
         });
       })
       .catch((err) => {
-       alert(err.message);
+        alert(err.message);
       });
   };
 
@@ -75,6 +75,7 @@ const RegisterScreen = ({ navigation }) => {
         raised
         title="Register"
         onPress={register}
+        disabled={!email || !name || !password}
       />
     </View>
   );
